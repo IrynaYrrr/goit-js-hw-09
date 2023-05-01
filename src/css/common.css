@@ -32,3 +32,30 @@ button {
 button:disabled {
   cursor: unset;
 }
+
+input {
+	width: 300px;
+	font-size: 30px;
+	padding: 2px 0 11px 6px;
+	border: 1px solid #cecece;
+	background: #F6F6f6;
+	border-radius: 5px;
+}
+
+.value {
+  color: rgb(249, 39, 39);
+  font-size: 25px;
+}
+
+.label {
+  color: rgb(0, 0, 0);
+  font-size: 25px;
+}
+
+.timer {
+  display: flex;
+}
+
+.field {
+  margin: 0 5px
+}
