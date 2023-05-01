@@ -16,3 +16,20 @@ img {
   display: block;
   max-width: 100%;
 }
+
+button {
+  border-radius: 5px;
+  width: 200px;
+  height: 50px;
+  border: 2px solid orange;
+  font-size: large;
+  font-weight: 700;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #776dff;
+  color: white;
+}
