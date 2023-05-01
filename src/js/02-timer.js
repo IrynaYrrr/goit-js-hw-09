@@ -40,7 +40,6 @@ flatpickr(input, {
         position: 'center-top',
         distance: '10px',
       });
-      // Notiflix.Notify.failure('Please choose a date in the future');
     } else {
       buttonStart.removeAttribute('disabled', '');
       const start = new Date(selectedDates[0]);
