@@ -29,13 +29,17 @@ function handleSubmit(evt) {
       .then(({ position, delay }) => {
         Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
         if (i === amount - 1) {
-          button.removeAttribute('disabled', '');
+          setTimeout(() => {
+            button.removeAttribute('disabled', '');
+          }, 4000);
         }
       })
       .catch(({ position, delay }) => {
         Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
         if (i === amount - 1) {
-          button.removeAttribute('disabled', '');
+          setTimeout(() => {
+            button.removeAttribute('disabled', '');
+          }, 4000);
         }
       });
   };
