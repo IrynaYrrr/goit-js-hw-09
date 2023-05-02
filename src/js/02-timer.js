@@ -34,6 +34,7 @@ flatpickr(input, {
   minuteIncrement: 1,
   onClose(selectedDates) {
     if(selectedDates[0] < new Date()){
+      buttonStart.setAttribute('disabled', '');
       Notiflix.Notify.failure('Please choose a date in the future',
       {
         width: '500px',
@@ -62,8 +63,7 @@ function addLeadingZero(value) {
 
  function onStart(){
   buttonStart.setAttribute('disabled', '');
-
-  const targetDate = new Date(input.value);
+  input.setAttribute('disabled', '');
 
   timerId = setInterval(() => {
    const { days, hours, minutes, seconds } = convertMs(milliseconds);
@@ -72,9 +72,9 @@ function addLeadingZero(value) {
    dataMinutes.textContent = addLeadingZero(minutes);
    dataSeconds.textContent = addLeadingZero(seconds);
    milliseconds -= 1000;
-
-   if(targetDate - Date.now() < 0){
-    clearInterval(timerId);
+   if(milliseconds < 0){
+     clearInterval(timerId);
+     input.removeAttribute('disabled', '');
    }
   }, 1000);
 }
