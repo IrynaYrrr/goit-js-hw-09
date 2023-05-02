@@ -1,3 +1,8 @@
+const inputDelay = document.querySelector('[name = "delay"]');
+
+console.log(inputDelay);
+
+
 function createPromise(position, delay) {
   const shouldResolve = Math.random() > 0.3;
   if (shouldResolve) {

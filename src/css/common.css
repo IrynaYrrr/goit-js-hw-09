@@ -59,3 +59,17 @@ input {
 .field {
   margin: 0 5px
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form > label:nth-child(3) > input[type=number] {
+  margin-left: 52px;
+}
+
+.form > button {
+  margin-left: 160px;
+}
