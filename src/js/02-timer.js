@@ -63,6 +63,8 @@ function addLeadingZero(value) {
  function onStart(){
   buttonStart.setAttribute('disabled', '');
 
+  const targetDate = new Date(input.value);
+
   timerId = setInterval(() => {
    const { days, hours, minutes, seconds } = convertMs(milliseconds);
    dataDays.textContent = addLeadingZero(days);
@@ -70,5 +72,9 @@ function addLeadingZero(value) {
    dataMinutes.textContent = addLeadingZero(minutes);
    dataSeconds.textContent = addLeadingZero(seconds);
    milliseconds -= 1000;
+
+   if(targetDate - Date.now() < 0){
+    clearInterval(timerId);
+   }
   }, 1000);
 }
