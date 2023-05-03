@@ -65,7 +65,7 @@ function addLeadingZero(value) {
   buttonStart.setAttribute('disabled', '');
   input.setAttribute('disabled', '');
 
-  timerId = setInterval(() => {
+  const timerId = setInterval(() => {
    const { days, hours, minutes, seconds } = convertMs(milliseconds);
    dataDays.textContent = addLeadingZero(days);
    dataHours.textContent = addLeadingZero(hours);
